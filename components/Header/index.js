@@ -24,10 +24,10 @@ function Header() {
     spanx2.classList.add('temp');
     spanx2.textContent = "98°"
 
-    .header-container.appendChild(divx);
-    .header-container.appendChild(spanx);
-    .header-container.appendChild(h1x);
-    .header-container.appendChild(spanx2);
+    header-container.appendChild(divx);
+    header-container.appendChild(spanx);
+    header-container.appendChild(h1x);
+    header-container.appendChild(spanx2);
 
     return divx;
 }
