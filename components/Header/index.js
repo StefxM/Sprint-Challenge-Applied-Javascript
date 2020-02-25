@@ -26,7 +26,10 @@ function Header(date, temp) {
     divx.append(spanx);
     divx.append(h1x);
     divx.append(spanx2);
-    headerContainer.append(Header(date, temp));
+   
+    
     return divx;
 }
 const headerContainer = document.querySelector('.header-container');
+
+headerContainer.append(Header(date, temp))
