@@ -3,32 +3,30 @@
 // Using a function create the component you see below:
 //
 //  <div class="header">
-//    <span class="date">SMARCH 28, 2019</span>
+//    <span class="date">MARCH 28, 2019</span>
 //    <h1>Lambda Times</h1>
 //    <span class="temp">98°</span>
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header() {
+function Header(date, temp) {
     const divx = document.createElement('div');
     divx.classList.add('header');
 
     const spanx = document.createElement('span')
-    spanx.classList.add('date');
-    spanx.textContent = "March 28, 2019"
+    spanx.classList.add(date);
+    
     
     const h1x = document.createElement('h1');
-    h1x.textContent = "Lambda Times"
+    h1x.textContent = "Lambda Times";
 
     const spanx2 = document.createElement('span');
-    spanx2.classList.add('temp');
-    spanx2.textContent = "98°"
+    spanx2.classList.add(temp);
 
-    header-container.appendChild(divx);
-    header-container.appendChild(spanx);
-    header-container.appendChild(h1x);
-    header-container.appendChild(spanx2);
-
+    divx.append(spanx);
+    divx.append(h1x);
+    divx.append(spanx2);
+    headerContainer.append(Header(date, temp));
     return divx;
 }
-
+const headerContainer = document.querySelector('.header-container');
