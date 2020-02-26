@@ -9,8 +9,8 @@
 //    <div class="tab">topic here</div>
 
 axios.get('https://lambda-times-backend.herokuapp.com/topics').then (response => {
-    console.log(response);// object
-    console.log(response.data.topics);// returns the array
+    //console.log(response);// object
+    //console.log(response.data.topics);// returns the array
     let topics = response.data.topics;
     topics.forEach( e => { // e for each one in the array
        tabContainer.append(newTab(e))

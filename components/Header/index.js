@@ -9,7 +9,7 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-function Header(date, temp) {
+/*function Header(date, temp) {
     const divx = document.createElement('div');
     divx.classList.add('header');
 

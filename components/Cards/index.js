@@ -12,13 +12,13 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles').then (response => {
     console.log(response);
-    let articles = response.data.articles;
+    let articles = response.data.articles.javascript;
     articles.forEach (e => {
         const cardsContainer = document.querySelector('.cards-container');
         cardsContainer.append(newArticles(e))
-    })
+    })})
 
-   const newArticles = card, headline, src, author => {
+   const newArticles = data => {
 // <div class="card">
 //   <div class="headline">{Headline of article}</div>
 //   <div class="author">
@@ -30,24 +30,24 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles').then (response 
 // </div>
         const cardDiv = document.createElement('div');
         cardDiv.classList.add('card');
-        cardDiv.textContent = card;
+       
      
         const headlineD = document.createElement('div');
         headlineD.classList.add('headline');
-        headlineD.textContent = headline;
+        headlineD.textContent = data.headline;
 
         const authorD = document.createElement('div');
         authorD.classList.add('author');
-        authorD.textContent = author;
+        
 
         const imageContainer = document.createElement('div');
         imageContainer.classList.add('img-container');
 
         const authImg = document.createElement('img');
-        authImg.src = src;
+        authImg.src = data.authorPhoto;
 
         const authName = document.createElement('span');
-        authName.textContent = 'By ${author}';
+        authName.textContent = `By ${data.authorName}`;
 
         cardDiv.append(headlineD);
         cardDiv.append(authorD);
