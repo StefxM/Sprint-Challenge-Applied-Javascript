@@ -10,44 +10,40 @@
 /* HTML:
   <div class="carousel">
     <div class="left-button"> < </div>
+    <div class="img-container">
     <img src="./assets/carousel/mountains.jpeg" />
     <img src="./assets/carousel/computer.jpeg" />
     <img src="./assets/carousel/trees.jpeg" />
     <img src="./assets/carousel/turntable.jpeg" />
+    </div>
     <div class="right-button"> > </div>
   </div>
+*/
+const images = ["./assets/carousel/mountains.jpeg","./assets/carousel/computer.jpeg","./assets/carousel/trees.jpeg","./assets/carousel/turntable.jpeg"]
 
 
-function carousel(){
+function Carousel(images){
   const carouselDiv = document.createElement('div');
   const leftButton = document.createElement('button');
-  const mountainImg = document.createElement('img');
-  const computerImg = document.createElement('img');
-  const treeImg = document.createElement('img');
-  const turntableImg = document.createElement('img');
+  const imgContainer = document.createElement('div');
   const rightButton = document.createElement('button');
   const carouselContainer = document.querySelector('.carousel-container');
 
   //classlist
   carouselDiv.classList.add('carousel');
   leftButton.classList.add('left-button');
+  imgContainer.classList.add('img-container');
   rightButton.classList.add('right-button');
 
-  //content
-  mountainImg.src = "./assets/carousel/mountains.jpeg";
-  computerImg.src = "./assets/carousel/computer.jpeg";
-  treeImg.src = "./assets/carousel/trees.jpeg";
-  turntableImg.src = "./assets/carousel/turntable.jpeg";
-
   //appending
-  carouselContainer.appendChild(carouselDiv);
+  carouselContainer.append(carouselDiv);
   carouselDiv.appendChild(leftButton);
-  carouselDiv.appendChild(mountainImg);
-  carouselDiv.appendChild(computerImg);
-  carouselDiv.appendChild(treeImg);
-  carouselDiv.appendChild(turntableImg);
   carouselDiv.appendChild(rightButton);
 
-    console.log(carouselDiv);
+  images.forEach ( (images) => {//so in the forEach you're missing something that has a reference to the array index per TL
+    carouselDiv.appendChild(imgContainer);
+  })
+
   return carouselDiv;
-}*/
+}
+Carousel();

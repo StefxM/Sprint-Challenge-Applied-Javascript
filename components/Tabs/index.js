@@ -18,13 +18,13 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics').then (response =>
       function newTab() {
         const topicDiv = document.createElement('div');
         topicDiv.classList.add('tab');
-        //tabContainer.append(topicDiv);
+        tabContainer.append(topicDiv);
         //topicDiv.textContent = topics;// will be one of the parameters
         return topicDiv;
     } 
       
        })
-       tabContainer.append(topicDiv);
+       //tabContainer.append(topicDiv);
     /*function newTab() {
         const topicDiv = document.createElement('div');
         topicDiv.classList.add('tab');
