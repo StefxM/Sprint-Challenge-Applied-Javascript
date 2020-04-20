@@ -10,7 +10,7 @@
 //
 // Create a card for each of the articles and add the card to the DOM.
 
-axios.get('https://lambda-times-backend.herokuapp.com/articles').then (response => {
+/*axios.get('https://lambda-times-backend.herokuapp.com/articles').then (response => {
     console.log(response);
     let articles = response.data.articles.javascript;
     articles.forEach (e => {
@@ -18,7 +18,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles').then (response 
         cardsContainer.append(newArticles(e))
     })})
 
-   const newArticles = data => {
+const newArticles = data => {
 // <div class="card">
 //   <div class="headline">{Headline of article}</div>
 //   <div class="author">
@@ -29,31 +29,28 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles').then (response 
 //   </div>
 // </div>
         const cardDiv = document.createElement('div');
-        cardDiv.classList.add('card');
-       
-     
         const headlineD = document.createElement('div');
-        headlineD.classList.add('headline');
-        headlineD.textContent = data.headline;
-
         const authorD = document.createElement('div');
-        authorD.classList.add('author');
-        
-
         const imageContainer = document.createElement('div');
-        imageContainer.classList.add('img-container');
-
         const authImg = document.createElement('img');
-        authImg.src = data.authorPhoto;
-
         const authName = document.createElement('span');
+
+
+        cardDiv.classList.add('card');
+        headlineD.classList.add('headline');
+        authorD.classList.add('author');
+        imageContainer.classList.add('img-container');
+      
+
+        headlineD.textContent = data.headline;
+        authImg.src = data.authorPhoto;
         authName.textContent = `By ${data.authorName}`;
 
-        cardDiv.append(headlineD);
-        cardDiv.append(authorD);
-        cardDiv.append(imageContainer);
-        imageContainer.append(authImg);
-        imageContainer.append(authName);
+        cardDiv.appendChild(headlineD);
+        cardDiv.appendChild(authorD);
+        cardDiv.appendChild(imageContainer);
+        cardDiv.appendChild(authImg);
+        cardDiv.appendChild(authName);
 
         return cardDiv;
-    }
+    }*/

@@ -9,27 +9,30 @@
 //  </div >
 // And add it to the DOM in the .header-container component
 
-/*function Header(date, temp) {
-    const divx = document.createElement('div');
-    divx.classList.add('header');
+function HeaderComponent() {
+    let headerDiv = document.createElement('div');
+    let spanDate = document.createElement('span');
+    let titleH1 = document.createElement('h1');
+    let tempSpan = document.createElement('span');
+    let headerContainer = document.querySelector('.header-container');
 
-    const spanx = document.createElement('span')
-    spanx.classList.add(date);
+      //class
+    headerDiv.classList.add('header');
+    spanDate.classList.add('date');
+    tempSpan.classList.add('temp');
+    //headerContainer.classList.add('header-container');
     
-    
-    const h1x = document.createElement('h1');
-    h1x.textContent = "Lambda Times";
+    //content
+    spanDate.textContent = `MARCH 28, 2010`;
+    titleH1.textContent = `Lambda Times`;
+    tempSpan.textContent = `98°`;
 
-    const spanx2 = document.createElement('span');
-    spanx2.classList.add(temp);
+    //append
+    headerContainer.append(headerDiv);
+    headerDiv.appendChild(spanDate);
+    headerDiv.appendChild(titleH1);
+    headerDiv.appendChild(tempSpan);
 
-    divx.append(spanx);
-    divx.append(h1x);
-    divx.append(spanx2);
-   
-    
-    return divx;
+    console.log(titleH1, "hello");
+    return headerDiv;
 }
-const headerContainer = document.querySelector('.header-container');
-
-headerContainer.append(Header(date, temp))

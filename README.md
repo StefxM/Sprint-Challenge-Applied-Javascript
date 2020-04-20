@@ -42,7 +42,7 @@ A method we use that lets you add events to a DOM
 
 4. Why would we convert a NodeList into an Array?
 
-We would convert if we need to use an array method like .push() or .pop().
+We would convert if we need to use .forEach()
 
 5. What is a component?
 
@@ -63,9 +63,9 @@ Your finished project must include all of the following requirements:
 
 * [x] Following the instructions in the `Header/index.js` file, create the Header component. 
 
-* [ ] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
+* [x] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
 
-* [ ] Following the instructions in the `Cards/index.js` file, create individual Cards components.
+* [x] Following the instructions in the `Cards/index.js` file, create individual Cards components.
 
 ## Stretch Problems
 
