@@ -10,17 +10,18 @@
 // And add it to the DOM in the .header-container component
 
 function HeaderComponent() {
-    let headerDiv = document.createElement('div');
-    let spanDate = document.createElement('span');
-    let titleH1 = document.createElement('h1');
-    let tempSpan = document.createElement('span');
-    let headerContainer = document.querySelector('.header-container');
+  //elements
+  let headerDiv = document.createElement('div');
+  let spanDate = document.createElement('span');
+  let titleH1 = document.createElement('h1');
+  let tempSpan = document.createElement('span');
+  let headerContainer = document.querySelector('.header-container');
 
       //class
     headerDiv.classList.add('header');
     spanDate.classList.add('date');
     tempSpan.classList.add('temp');
-    //headerContainer.classList.add('header-container');
+  
     
     //content
     spanDate.textContent = `MARCH 28, 2010`;
@@ -28,11 +29,13 @@ function HeaderComponent() {
     tempSpan.textContent = `98°`;
 
     //append
-    headerContainer.append(headerDiv);
+    headerContainer.appendChild(headerDiv);
     headerDiv.appendChild(spanDate);
     headerDiv.appendChild(titleH1);
     headerDiv.appendChild(tempSpan);
 
-    console.log(titleH1, "hello");
+    console.log(headerDiv);
     return headerDiv;
 }
+
+HeaderComponent();
