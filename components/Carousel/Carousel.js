@@ -35,6 +35,11 @@ function Carousel(images){
   imgContainer.classList.add('img-container');
   rightButton.classList.add('right-button');
 
+  /*onclicks
+  leftButton.addEventListener('click', cb);
+  rightButton.addEventListener('click', cb);
+  */
+
   //appending
   carouselContainer.append(carouselDiv);
   carouselDiv.appendChild(leftButton);
